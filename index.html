@@ -25,14 +25,14 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background: #0a0e1a;
-            color: #ffffff;
+            background: #ffffff;
+            color: #1a1a1a;
             overflow: hidden;
         }
         
         @media print {
             @page {
-                size: landscape;
+                size: A4 landscape;
                 margin: 0;
             }
             
@@ -46,7 +46,7 @@
                 page-break-inside: avoid;
                 width: 297mm;
                 height: 210mm;
-                padding: 12mm 18mm;
+                padding: 10mm 15mm;
                 position: relative;
                 overflow: hidden;
             }
@@ -64,9 +64,9 @@
             width: 100vw;
             height: 100vh;
             display: none;
-            padding: 40px 60px;
+            padding: 25px 40px;
             position: relative;
-            background: #0a0e1a;
+            background: #ffffff;
         }
         
         .slide.active {
@@ -79,30 +79,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         
         .orn-bars {
             display: flex;
             align-items: flex-end;
-            gap: 6px;
-            height: 35px;
+            gap: 5px;
+            height: 28px;
         }
         
         .orn-bar {
-            width: 14px;
-            border-radius: 7px;
+            width: 12px;
+            border-radius: 6px;
         }
         
-        .orn-bar:nth-child(1) { height: 35px; background: #2c3e66; }
-        .orn-bar:nth-child(2) { height: 28px; background: #1976d2; }
-        .orn-bar:nth-child(3) { height: 35px; background: #00bcd4; }
-        .orn-bar:nth-child(4) { height: 28px; background: #8bc34a; }
-        .orn-bar:nth-child(5) { height: 35px; background: #ffeb3b; }
-        .orn-bar:nth-child(6) { height: 28px; background: #f44336; }
+        .orn-bar:nth-child(1) { height: 28px; background: #2c3e66; }
+        .orn-bar:nth-child(2) { height: 22px; background: #1976d2; }
+        .orn-bar:nth-child(3) { height: 28px; background: #00bcd4; }
+        .orn-bar:nth-child(4) { height: 22px; background: #8bc34a; }
+        .orn-bar:nth-child(5) { height: 28px; background: #ffeb3b; }
+        .orn-bar:nth-child(6) { height: 22px; background: #f44336; }
         
         .orn-text-logo {
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 900;
             color: white;
             letter-spacing: 2px;
@@ -114,7 +114,7 @@
         }
         
         .tf-logo-css {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
             color: white;
             letter-spacing: 1px;
@@ -128,189 +128,187 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
             position: relative;
             z-index: 10;
         }
         
+        .header-dark {
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+        
         .slide-number {
-            font-size: 12px;
-            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            color: rgba(255,255,255,0.9);
             font-weight: 600;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
         
+        .slide-number-dark {
+            color: rgba(0,0,0,0.6);
+        }
+        
         h1 {
-            font-size: 52px;
+            font-size: 38px;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             color: white;
             letter-spacing: -1px;
         }
         
         h2 {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: white;
             line-height: 1.2;
         }
         
         h3 {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: var(--orn-cyan);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
         }
         
         .subtitle {
-            font-size: 20px;
-            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            color: rgba(255,255,255,0.95);
             font-weight: 400;
-            line-height: 1.5;
-            max-width: 700px;
+            line-height: 1.4;
+            max-width: 600px;
         }
         
         .content {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             z-index: 2;
+            overflow: hidden;
         }
         
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+            gap: 25px;
+            align-items: start;
         }
         
         .three-column {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .four-column {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
-        /* Text box for readability */
         .text-box {
-            background: rgba(10, 14, 26, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .text-box-light {
             background: rgba(255, 255, 255, 0.95);
-            color: #1a1a1a;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
         }
         
-        .text-box-light h1,
-        .text-box-light h2,
-        .text-box-light h3 {
+        .text-box h1, .text-box h2, .text-box h3 {
             color: var(--orn-navy);
         }
         
-        .text-box-light .subtitle {
+        .text-box .subtitle {
             color: #555;
         }
         
         .problem-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.98);
             border-left: 4px solid var(--orn-cyan);
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 10px;
+            padding: 18px;
             color: #1a1a1a;
-        }
-        
-        .problem-card-dark {
-            background: rgba(10,14,26,0.85);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .problem-number {
-            font-size: 42px;
+            font-size: 32px;
             font-weight: 900;
             color: var(--orn-cyan);
             opacity: 0.8;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             line-height: 1;
         }
         
         .problem-title {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: inherit;
         }
         
         .problem-desc {
-            font-size: 14px;
-            color: inherit;
-            opacity: 0.9;
-            line-height: 1.6;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
         }
         
         .problem-desc strong {
             font-weight: 700;
+            color: #1a1a1a;
         }
         
         .fedex-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 25px;
-            margin: 30px 0;
-            padding: 25px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.98);
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
         }
         
         .fedex-box {
             background: linear-gradient(135deg, var(--orn-navy) 0%, #2c5282 100%);
-            padding: 30px;
-            border-radius: 12px;
+            padding: 22px;
+            border-radius: 10px;
             text-align: center;
-            min-width: 220px;
+            min-width: 180px;
             color: white;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.2);
         }
         
         .fedex-label {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             opacity: 0.9;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--orn-cyan);
         }
         
         .fedex-brand {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 900;
             color: #fff;
             line-height: 1.2;
         }
         
         .arrow {
-            font-size: 32px;
+            font-size: 24px;
             color: var(--orn-cyan);
             font-weight: 300;
         }
@@ -318,138 +316,137 @@
         .orn-box {
             background: white;
             border: 3px solid var(--orn-cyan);
-            padding: 30px;
-            border-radius: 12px;
+            padding: 22px;
+            border-radius: 10px;
             text-align: center;
-            min-width: 240px;
-            box-shadow: 0 8px 30px rgba(0,188,212,0.2);
+            min-width: 190px;
+            box-shadow: 0 6px 24px rgba(0,188,212,0.2);
         }
         
         .orn-label {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             color: var(--orn-cyan);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 700;
         }
         
         .orn-brand {
-            font-size: 40px;
+            font-size: 32px;
             font-weight: 900;
             color: var(--orn-navy);
             line-height: 1.2;
         }
         
         .equation-container {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.98);
             border: 2px solid var(--orn-cyan);
-            border-radius: 14px;
-            padding: 25px;
-            margin: 15px 0;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 10px 0;
             text-align: center;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .equation {
-            font-size: 24px;
+            font-size: 18px;
             font-family: 'Courier New', monospace;
             color: var(--orn-navy);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 700;
             letter-spacing: -1px;
         }
         
         .equation-desc {
             color: #555;
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 11px;
+            line-height: 1.4;
         }
         
         .equation-desc strong {
             color: var(--orn-navy);
             display: block;
-            margin-bottom: 6px;
-        }
-        
-        .equation-desc em {
-            color: #888;
+            margin-bottom: 4px;
         }
         
         .equation-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 25px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .values-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 25px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .value-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.98);
             border: 2px solid #e0e0e0;
-            border-radius: 14px;
-            padding: 25px;
+            border-radius: 10px;
+            padding: 18px;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
         
         .value-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-        
-        .value-title {
-            font-size: 17px;
-            font-weight: 800;
-            color: var(--orn-navy);
+            font-size: 24px;
             margin-bottom: 8px;
         }
         
+        .value-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--orn-navy);
+            margin-bottom: 6px;
+        }
+        
         .value-desc {
-            font-size: 13px;
+            font-size: 11px;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .pem-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
+            gap: 20px;
+            margin: 20px 0;
         }
         
         .pem-item {
             text-align: center;
-            padding: 25px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
-            min-width: 160px;
+            padding: 18px;
+            background: rgba(255,255,255,0.98);
+            border-radius: 12px;
+            min-width: 130px;
             border-top: 4px solid var(--orn-cyan);
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .pem-letter {
-            font-size: 48px;
+            font-size: 36px;
             font-weight: 900;
             color: var(--orn-cyan);
             line-height: 1;
-            margin-bottom: 8px;
-        }
-        
-        .pem-word {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--orn-navy);
             margin-bottom: 6px;
         }
         
+        .pem-word {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--orn-navy);
+            margin-bottom: 4px;
+        }
+        
         .pem-example {
-            font-size: 12px;
+            font-size: 10px;
             color: #666;
             font-style: italic;
         }
@@ -457,106 +454,98 @@
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+            gap: 15px;
+            margin-top: 15px;
         }
         
         .metric-card {
-            background: rgba(255,255,255,0.95);
-            border-radius: 14px;
-            padding: 25px 15px;
+            background: rgba(255,255,255,0.98);
+            border-radius: 10px;
+            padding: 18px 12px;
             text-align: center;
             border-top: 4px solid var(--orn-cyan);
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .metric-value {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 900;
             color: var(--orn-navy);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             line-height: 1;
         }
         
         .metric-label {
-            font-size: 11px;
+            font-size: 10px;
             color: #666;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-weight: 600;
         }
         
         .not-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 25px 0;
+            gap: 8px;
+            margin: 18px 0;
             justify-content: center;
         }
         
         .not-item {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.95);
             border: 1px solid #ddd;
             color: #999;
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 13px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: 600;
             text-decoration: line-through;
         }
         
         .are-container {
             text-align: center;
-            margin: 25px 0;
+            margin: 18px 0;
         }
         
         .are-item {
             background: linear-gradient(135deg, var(--orn-cyan) 0%, var(--orn-blue) 100%);
             color: #fff;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 15px;
             font-weight: 800;
             display: inline-block;
-            box-shadow: 0 6px 25px rgba(0,188,212,0.3);
-            letter-spacing: 3px;
+            box-shadow: 0 4px 20px rgba(0,188,212,0.3);
+            letter-spacing: 2px;
         }
         
         .quote {
-            font-size: 17px;
+            font-size: 14px;
             font-style: italic;
             color: #555;
             border-left: 4px solid var(--orn-cyan);
-            padding-left: 25px;
-            margin: 25px 0;
-            line-height: 1.6;
-            background: rgba(255,255,255,0.95);
-            padding: 20px 25px;
-            border-radius: 0 12px 12px 0;
+            padding-left: 18px;
+            margin: 18px 0;
+            line-height: 1.5;
+            background: rgba(255,255,255,0.98);
+            padding: 15px 18px;
+            border-radius: 0 10px 10px 0;
             color: #1a1a1a;
-        }
-        
-        .quote-dark {
-            background: rgba(10,14,26,0.85);
-            color: rgba(255,255,255,0.9);
-            border-left-color: var(--orn-cyan);
-        }
-        
-        .quote-dark strong {
-            color: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
         
         .nav {
             position: fixed;
-            bottom: 25px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 12px;
+            gap: 10px;
             z-index: 100;
             background: rgba(0,0,0,0.6);
-            padding: 10px 20px;
-            border-radius: 50px;
+            padding: 8px 16px;
+            border-radius: 30px;
             backdrop-filter: blur(10px);
         }
         
@@ -564,10 +553,10 @@
             background: var(--orn-cyan);
             border: none;
             color: #fff;
-            padding: 10px 24px;
-            border-radius: 30px;
+            padding: 8px 18px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
@@ -581,7 +570,7 @@
             position: fixed;
             bottom: 0;
             left: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, var(--orn-cyan) 0%, var(--orn-blue) 100%);
             transition: width 0.3s ease;
             z-index: 101;
@@ -589,21 +578,21 @@
         
         .print-btn {
             position: fixed;
-            top: 25px;
-            right: 25px;
+            top: 20px;
+            right: 20px;
             background: var(--orn-cyan);
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,188,212,0.3);
+            box-shadow: 0 4px 12px rgba(0,188,212,0.3);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: all 0.3s ease;
         }
         
@@ -615,27 +604,28 @@
         .compare-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 13px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 12px;
+            margin: 18px 0;
+            font-size: 11px;
+            background: rgba(255,255,255,0.98);
+            border-radius: 10px;
             overflow: hidden;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .compare-table th {
             background: var(--orn-navy);
             color: white;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
         .compare-table td {
-            padding: 16px;
+            padding: 12px;
             border-bottom: 1px solid #e0e0e0;
         }
         
@@ -654,73 +644,74 @@
         }
         
         .partner-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.98);
             border: 2px solid #e0e0e0;
-            border-radius: 16px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 18px;
             text-align: center;
             transition: all 0.3s ease;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
         
         .partner-card:hover {
             border-color: var(--orn-cyan);
-            box-shadow: 0 8px 30px rgba(0,188,212,0.2);
+            box-shadow: 0 6px 24px rgba(0,188,212,0.2);
         }
         
         .partner-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 10px;
         }
         
         .partner-title {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 800;
             color: var(--orn-navy);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .partner-benefits {
             text-align: left;
-            font-size: 13px;
+            font-size: 11px;
             color: #555;
-            line-height: 1.9;
+            line-height: 1.7;
         }
         
         .traction-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 18px;
+            margin-top: 18px;
         }
         
         .traction-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            background: rgba(255,255,255,0.98);
             color: #1a1a1a;
-            padding: 30px;
-            border-radius: 16px;
+            padding: 22px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
             border: 1px solid #e0e0e0;
         }
         
         .traction-number {
-            font-size: 48px;
+            font-size: 36px;
             font-weight: 900;
             color: var(--orn-cyan);
             line-height: 1;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .traction-label {
-            font-size: 15px;
+            font-size: 13px;
             color: #333;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 600;
         }
         
         .traction-vs {
-            font-size: 12px;
+            font-size: 10px;
             color: #888;
             font-style: italic;
         }
@@ -728,70 +719,39 @@
         .team-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 18px;
+            margin-top: 18px;
         }
         
         .team-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.98);
             border: 2px solid #e0e0e0;
-            border-radius: 16px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 18px;
             text-align: center;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
         
         .team-name {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 800;
             color: var(--orn-navy);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         
         .team-role {
-            font-size: 14px;
+            font-size: 12px;
             color: var(--orn-cyan);
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .team-cred {
-            font-size: 13px;
+            font-size: 11px;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.6;
             text-align: left;
-        }
-        
-        .map-stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .map-stat {
-            text-align: center;
-            background: rgba(255,255,255,0.95);
-            padding: 25px 35px;
-            border-radius: 14px;
-            border: 1px solid #e0e0e0;
-            color: #1a1a1a;
-        }
-        
-        .map-stat-number {
-            font-size: 52px;
-            font-weight: 900;
-            color: var(--orn-cyan);
-            line-height: 1;
-        }
-        
-        .map-stat-label {
-            font-size: 13px;
-            color: #666;
-            margin-top: 8px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
         }
         
         @keyframes fadeIn {
@@ -808,7 +768,6 @@
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
         
-        /* Background image styles */
         .bg-image {
             position: absolute;
             top: 0;
@@ -825,20 +784,20 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(10,14,26,0.85) 0%, rgba(10,14,26,0.6) 50%, rgba(10,14,26,0.4) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
             z-index: 1;
         }
         
         .bg-overlay-light {
-            background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 100%);
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.5) 100%);
         }
         
         .bg-overlay-medium {
-            background: linear-gradient(135deg, rgba(10,14,26,0.75) 0%, rgba(10,14,26,0.5) 100%);
+            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
         }
         
         .hero-text {
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 900;
             line-height: 1.05;
             color: white;
@@ -846,243 +805,255 @@
         }
         
         .hero-subtitle {
-            font-size: 22px;
+            font-size: 18px;
             color: rgba(255,255,255,0.95);
-            font-weight: 300;
-            max-width: 650px;
-            line-height: 1.5;
-        }
-        
-        .scenic-caption {
-            position: absolute;
-            bottom: 40px;
-            right: 60px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
-            font-style: italic;
-            z-index: 10;
+            font-weight: 400;
+            max-width: 550px;
+            line-height: 1.4;
         }
         
         .brand-pill {
-            background: rgba(255,255,255,0.95);
-            padding: 20px 35px;
-            border-radius: 12px;
+            background: rgba(255,255,255,0.98);
+            padding: 15px 25px;
+            border-radius: 10px;
             border-left: 3px solid var(--orn-cyan);
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
         
         .brand-pill-title {
-            font-size: 26px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--orn-navy);
         }
         
         .brand-pill-sub {
-            font-size: 11px;
+            font-size: 10px;
             color: #666;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-top: 4px;
+            margin-top: 3px;
         }
         
         .litmus-test-box {
-            background: rgba(255,255,255,0.95);
-            padding: 25px;
-            border-radius: 14px;
+            background: rgba(255,255,255,0.98);
+            padding: 18px;
+            border-radius: 10px;
             border: 1px solid #e0e0e0;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .litmus-test-box h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
+            font-size: 18px;
+            margin-bottom: 12px;
             color: var(--orn-navy);
         }
         
         .virtuous-cycle {
-            background: rgba(255,255,255,0.95);
-            padding: 25px;
-            border-radius: 14px;
+            background: rgba(255,255,255,0.98);
+            padding: 18px;
+            border-radius: 10px;
             text-align: center;
             border: 1px solid #e0e0e0;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .virtuous-title {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .virtuous-text {
-            font-size: 15px;
+            font-size: 13px;
             color: #333;
-            line-height: 2;
+            line-height: 1.8;
         }
         
         .final-statement {
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            border-radius: 16px;
+            background: rgba(255,255,255,0.98);
+            padding: 22px;
+            border-radius: 12px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 18px;
             border: 1px solid #e0e0e0;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .final-statement-line1 {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--orn-navy);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .final-statement-line2 {
-            font-size: 18px;
+            font-size: 15px;
             color: var(--orn-cyan);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .final-statement-line3 {
-            font-size: 14px;
+            font-size: 12px;
             color: #666;
         }
         
         .join-box {
-            background: rgba(255,255,255,0.95);
-            padding: 25px;
-            border-radius: 14px;
+            background: rgba(255,255,255,0.98);
+            padding: 18px;
+            border-radius: 10px;
             border: 1px solid #e0e0e0;
             color: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
         
         .join-box strong {
             color: var(--orn-navy);
-            font-size: 18px;
+            font-size: 15px;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         .join-box span {
             color: #555;
-            font-size: 15px;
-            line-height: 1.7;
+            font-size: 12px;
+            line-height: 1.6;
         }
-        
-        /* Global Presence Slide Styles */
-        .presence-container {
+
+        /* SLIDE 6 SPECIFIC - OPTIMIZED FOR A4 LANDSCAPE */
+        .slide6-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-        
-        .world-map-visual {
-            background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            min-height: 400px;
-            border: 2px solid rgba(0,188,212,0.3);
-        }
-        
-        .map-title {
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 30px;
-        }
-        
-        .continents-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1.4fr 1fr;
             gap: 20px;
+            align-items: start;
+            height: calc(100% - 80px);
+            margin-top: 10px;
         }
-        
-        .continent-item {
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .continent-item.active {
-            background: rgba(0,188,212,0.2);
-            border-color: var(--orn-cyan);
-        }
-        
-        .continent-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 8px;
-        }
-        
-        .continent-count {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--orn-cyan);
-        }
-        
-        .continent-label {
-            font-size: 11px;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .presence-stats {
+
+        .slide6-map-section {
+            position: relative;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 20px;
         }
-        
-        .presence-card {
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
-            padding: 25px;
+
+        .slide6-map-wrapper {
+            flex: 1;
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+        }
+
+        .slide6-map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 15px;
+        }
+
+        .slide6-map-fallback {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%);
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide6-stats-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 100%;
+        }
+
+        .slide6-stat-card {
+            background: rgba(255,255,255,0.98);
+            border-radius: 10px;
+            padding: 16px;
             border-left: 4px solid var(--orn-cyan);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-        
-        .presence-number {
-            font-size: 48px;
+
+        .slide6-stat-number {
+            font-size: 36px;
             font-weight: 900;
             color: var(--orn-navy);
             line-height: 1;
+            margin-bottom: 6px;
         }
-        
-        .presence-label {
-            font-size: 14px;
+
+        .slide6-stat-label {
+            font-size: 12px;
             color: #666;
-            margin-top: 5px;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        
-        .presence-desc {
-            font-size: 13px;
+
+        .slide6-stat-desc {
+            font-size: 11px;
             color: #888;
-            margin-top: 8px;
-            line-height: 1.5;
+            margin-top: 6px;
+            line-height: 1.4;
         }
-        
-        .key-markets-list {
+
+        .slide6-footer {
+            margin-top: 12px;
+            background: rgba(255,255,255,0.98);
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .slide6-footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .slide6-hubs {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .slide6-hubs strong {
+            color: var(--orn-navy);
+        }
+
+        .slide6-markets {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 6px;
         }
-        
-        .market-tag {
+
+        .slide6-market-tag {
             background: var(--orn-cyan);
             color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 10px;
             font-weight: 600;
         }
     </style>
@@ -1090,16 +1061,16 @@
 <body>
 
     <button class="print-btn" onclick="printToPDF()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/>
             <path d="M6 14h12v8H6z"/>
         </svg>
         Save as PDF
     </button>
 
-    <!-- SLIDE 1: OPENING - AMALFI COAST WINDING ROAD -->
+    <!-- SLIDE 1: OPENING - INSPIRATIONAL ROAD -->
     <div class="slide active" id="slide1">
-        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=1920&q=80" alt="Amalfi Coast Winding Road" class="bg-image">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80" alt="Open Road Journey" class="bg-image">
         <div class="bg-overlay"></div>
         
         <div class="header">
@@ -1114,18 +1085,18 @@
                 </div>
                 <div class="orn-text-logo">ORN</div>
             </div>
-            <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
                 <span class="tf-logo-css">Trip<span>Factory</span></span>
                 <span class="slide-number">01 / 12</span>
             </div>
         </div>
         
         <div class="content" style="justify-content: center;">
-            <div class="animate delay-1" style="margin-bottom: 25px;">
-                <div style="font-size: 14px; letter-spacing: 5px; color: var(--orn-cyan); text-transform: uppercase; font-weight: 700;">We Are ORN</div>
+            <div class="animate delay-1" style="margin-bottom: 20px;">
+                <div style="font-size: 12px; letter-spacing: 4px; color: var(--orn-cyan); text-transform: uppercase; font-weight: 700;">We Are ORN</div>
             </div>
             
-            <div class="animate delay-2" style="max-width: 850px;">
+            <div class="animate delay-2" style="max-width: 800px;">
                 <div class="hero-text">
                     We Built the<br>
                     <span style="color: var(--orn-cyan);">Infrastructure</span><br>
@@ -1134,14 +1105,14 @@
                 </div>
             </div>
             
-            <div class="animate delay-3" style="margin: 35px 0; max-width: 650px;">
+            <div class="animate delay-3" style="margin: 25px 0; max-width: 550px;">
                 <p class="hero-subtitle">
                     Not a travel company. Not a tech company.<br>
                     <strong style="color: var(--orn-cyan);">The enabling layer that makes every journey possible.</strong>
                 </p>
             </div>
             
-            <div class="animate delay-4" style="margin-top: 45px; display: flex; gap: 30px;">
+            <div class="animate delay-4" style="margin-top: 35px; display: flex; gap: 20px;">
                 <div class="brand-pill">
                     <div class="brand-pill-title">TripFactory</div>
                     <div class="brand-pill-sub">Powered by ORN</div>
@@ -1152,15 +1123,11 @@
                 </div>
             </div>
         </div>
-        
-        <div class="scenic-caption">
-            Every road leads somewhere. We make sure you get there.
-        </div>
     </div>
 
-    <!-- SLIDE 2: THE PROBLEM - CITY SKYLINE -->
+    <!-- SLIDE 2: THE PROBLEM - CITY SKYLINE DAY -->
     <div class="slide" id="slide2">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="City Skyline Above Clouds" class="bg-image">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="City Skyline Day" class="bg-image">
         <div class="bg-overlay bg-overlay-medium"></div>
         
         <div class="header">
@@ -1179,28 +1146,28 @@
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 900px;">
+            <div class="text-box animate delay-1" style="max-width: 800px;">
                 <h3>The Problem</h3>
-                <h1>Tourism Had No<br>Infrastructure Layer</h1>
-                <p class="subtitle">Three fundamental failures that broke every journey—until now</p>
+                <h1 style="color: var(--orn-navy);">Tourism Had No<br>Infrastructure Layer</h1>
+                <p class="subtitle" style="color: #555;">Three fundamental failures that broke every journey—until now</p>
             </div>
             
-            <div class="three-column" style="margin-top: 30px;">
-                <div class="problem-card-dark animate delay-2">
+            <div class="three-column" style="margin-top: 20px;">
+                <div class="problem-card animate delay-2">
                     <div class="problem-number">01</div>
                     <div class="problem-title">Knowledge Gap</div>
                     <div class="problem-desc">
                         Information was abundant, but <strong>knowing how to use it</strong> was scarce. Travelers drowned in data but lacked wisdom.
                     </div>
                 </div>
-                <div class="problem-card-dark animate delay-3" style="border-left-color: var(--orn-orange);">
+                <div class="problem-card animate delay-3" style="border-left-color: var(--orn-orange);">
                     <div class="problem-number" style="color: var(--orn-orange);">02</div>
                     <div class="problem-title">Product Mismatch</div>
                     <div class="problem-desc">
                         Static supply chains delivered <strong>pre-packaged products</strong>, not personalized solutions.
                     </div>
                 </div>
-                <div class="problem-card-dark animate delay-4" style="border-left-color: var(--orn-red);">
+                <div class="problem-card animate delay-4" style="border-left-color: var(--orn-red);">
                     <div class="problem-number" style="color: var(--orn-red);">03</div>
                     <div class="problem-title">Delivery Void</div>
                     <div class="problem-desc">
@@ -1209,7 +1176,7 @@
                 </div>
             </div>
             
-            <div class="quote-dark animate delay-4" style="margin-top: 25px; max-width: 900px;">
+            <div class="quote animate delay-4" style="margin-top: 20px; max-width: 800px;">
                 "The fatal flaw in past attempts? The fragments ARE the power of the industry. What was needed was to enable and orchestrate—not consolidate."
             </div>
         </div>
@@ -1236,12 +1203,12 @@
         </div>
         
         <div class="content" style="text-align: center;">
-            <div class="text-box animate delay-1" style="max-width: 800px; margin: 0 auto;">
+            <div class="text-box animate delay-1" style="max-width: 700px; margin: 0 auto;">
                 <h3>The Solution</h3>
-                <h1 style="font-size: 52px;">We Are Not What You Think</h1>
+                <h1 style="font-size: 38px; color: var(--orn-navy);">We Are Not What You Think</h1>
             </div>
             
-            <div class="not-list animate delay-2" style="margin: 25px 0;">
+            <div class="not-list animate delay-2" style="margin: 20px 0;">
                 <span class="not-item">Not a Tour Operator</span>
                 <span class="not-item">Not a DMC</span>
                 <span class="not-item">Not an Airline</span>
@@ -1254,32 +1221,32 @@
                 <div class="are-item">WE ARE AN ENABLER</div>
             </div>
             
-            <div class="fedex-container animate delay-4" style="max-width: 700px; margin: 30px auto;">
+            <div class="fedex-container animate delay-4" style="max-width: 600px; margin: 25px auto;">
                 <div class="fedex-box">
                     <div class="fedex-label">Logistics Giants</div>
                     <div class="fedex-brand">FedEx</div>
-                    <div style="font-size: 12px; opacity: 0.9; margin-top: 8px;">Moves packages globally</div>
+                    <div style="font-size: 11px; opacity: 0.9; margin-top: 6px;">Moves packages globally</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="orn-box">
                     <div class="orn-label">We Are</div>
                     <div class="orn-brand">ORN</div>
-                    <div style="color: #666; margin-top: 8px; font-size: 14px;">Moves travelers seamlessly</div>
+                    <div style="color: #666; margin-top: 6px; font-size: 12px;">Moves travelers seamlessly</div>
                 </div>
             </div>
             
-            <p class="animate delay-4" style="font-size: 18px; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto; background: rgba(10,14,26,0.8); padding: 20px; border-radius: 12px;">
-                We have created <strong>principal infrastructure</strong> for tourism. Airlines move you airport-to-airport. We move you door-to-door, end-to-end.
+            <p class="animate delay-4" style="font-size: 15px; color: rgba(255,255,255,0.95); max-width: 600px; margin: 0 auto; background: rgba(0,0,0,0.6); padding: 15px; border-radius: 10px;">
+                We have created <strong style="color: var(--orn-cyan);">principal infrastructure</strong> for tourism. Airlines move you airport-to-airport. We move you door-to-door, end-to-end.
             </p>
         </div>
     </div>
 
-    <!-- SLIDE 4: THE PLATFORM - TECH BLUE ABSTRACT -->
+    <!-- SLIDE 4: THE PLATFORM - WALL STREET DAY -->
     <div class="slide" id="slide4">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" alt="Technology Network" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1920&q=80" alt="Wall Street Day" class="bg-image">
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1289,16 +1256,16 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">04 / 12</span>
+            <span class="slide-number slide-number-dark">04 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 800px;">
+            <div class="text-box animate delay-1" style="max-width: 700px;">
                 <h3>The Platform</h3>
-                <h1>Mathematical Equations<br>for Human Experience</h1>
-                <p class="subtitle">Computer Science + Wall Street + Infrastructure = The ORN Ecosystem</p>
+                <h1 style="color: var(--orn-navy);">Mathematical Equations<br>for Human Experience</h1>
+                <p class="subtitle" style="color: #555;">Computer Science + Wall Street + Infrastructure = The ORN Ecosystem</p>
             </div>
             
             <div class="equation-grid">
@@ -1328,7 +1295,7 @@
                 </div>
             </div>
             
-            <div class="two-column" style="margin-top: 25px;">
+            <div class="two-column" style="margin-top: 20px;">
                 <div class="quote animate delay-4" style="margin: 0;">
                     "This is not a people ocean—this is an ecosystem where systems, processes, AI and predictive technology control the experience."
                 </div>
@@ -1356,12 +1323,12 @@
         </div>
     </div>
 
-    <!-- SLIDE 5: VALUES - MOUNTAIN LAKE -->
+    <!-- SLIDE 5: VALUES - MOUNTAIN LAKE BRIGHT -->
     <div class="slide" id="slide5">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" alt="Mountain Lake" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80" alt="Mountain Lake Bright" class="bg-image">
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1371,16 +1338,16 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">05 / 12</span>
+            <span class="slide-number slide-number-dark">05 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 700px;">
+            <div class="text-box animate delay-1" style="max-width: 600px;">
                 <h3>How We Built It</h3>
-                <h1>Values-Driven Infrastructure</h1>
-                <p class="subtitle">Integrity, Innovation, Reliability, Care—the principles that created our platform</p>
+                <h1 style="color: var(--orn-navy);">Values-Driven Infrastructure</h1>
+                <p class="subtitle" style="color: #555;">Integrity, Innovation, Reliability, Care—the principles that created our platform</p>
             </div>
             
             <div class="pem-container animate delay-2">
@@ -1426,12 +1393,9 @@
         </div>
     </div>
 
-    <!-- SLIDE 6: GLOBAL PRESENCE - HTML VISUALIZATION -->
+    <!-- SLIDE 6: GLOBAL PRESENCE - OPTIMIZED FOR A4 LANDSCAPE -->
     <div class="slide" id="slide6">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" alt="Earth from Space" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
-        
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1441,95 +1405,68 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">06 / 12</span>
+            <span class="slide-number slide-number-dark">06 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 600px; margin-bottom: 30px;">
-                <h3>Global Presence</h3>
-                <h1>We Are Everywhere<br>That Tourism Happens</h1>
+            <div class="text-box animate delay-1" style="max-width: 500px; margin-bottom: 12px; padding: 15px 20px;">
+                <h3 style="margin-bottom: 5px;">Global Presence</h3>
+                <h1 style="color: var(--orn-navy); font-size: 28px; margin-bottom: 5px;">We Have the World Covered</h1>
+                <p class="subtitle" style="color: #555; font-size: 13px;">Infrastructure that spans continents, cultures, and currencies</p>
             </div>
             
-            <div class="presence-container animate delay-2">
-                <div class="world-map-visual">
-                    <div class="map-title">ORN Worldwide Footprint</div>
-                    <div class="continents-grid">
-                        <div class="continent-item active">
-                            <div class="continent-name">🇪🇺 Europe</div>
-                            <div class="continent-count">12</div>
-                            <div class="continent-label">Countries</div>
-                        </div>
-                        <div class="continent-item active">
-                            <div class="continent-name">🇺🇸 Americas</div>
-                            <div class="continent-count">8</div>
-                            <div class="continent-label">Countries</div>
-                        </div>
-                        <div class="continent-item active">
-                            <div class="continent-name">🇦🇪 Middle East</div>
-                            <div class="continent-count">6</div>
-                            <div class="continent-label">Countries</div>
-                        </div>
-                        <div class="continent-item active">
-                            <div class="continent-name">🇮🇳 Asia Pacific</div>
-                            <div class="continent-count">10</div>
-                            <div class="continent-label">Countries</div>
-                        </div>
-                        <div class="continent-item active">
-                            <div class="continent-name">🇦🇺 Oceania</div>
-                            <div class="continent-count">3</div>
-                            <div class="continent-label">Countries</div>
-                        </div>
-                        <div class="continent-item active">
-                            <div class="continent-name">🇿🇦 Africa</div>
-                            <div class="continent-count">2</div>
-                            <div class="continent-label">Countries</div>
+            <div class="slide6-container animate delay-2">
+                <div class="slide6-map-section">
+                    <div class="slide6-map-wrapper">
+                        <img src="global-map.png" alt="ORN Global Map" class="slide6-map-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="slide6-map-fallback">
+                            [Global Map Image]<br>
+                            <span style="font-size: 12px; opacity: 0.8;">global-map.png</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="presence-stats">
-                    <div class="presence-card animate delay-3">
-                        <div class="presence-number">5</div>
-                        <div class="presence-label">Continents Active</div>
-                        <div class="presence-desc">Present across all major tourism markets worldwide</div>
+                <div class="slide6-stats-section">
+                    <div class="slide6-stat-card animate delay-3">
+                        <div class="slide6-stat-number" style="color: var(--orn-cyan);">40+</div>
+                        <div class="slide6-stat-label">Countries</div>
+                        <div class="slide6-stat-desc">Direct operations across 5 continents</div>
                     </div>
                     
-                    <div class="presence-card animate delay-3" style="border-left-color: var(--orn-blue);">
-                        <div class="presence-number">30+</div>
-                        <div class="presence-label">Countries</div>
-                        <div class="presence-desc">Direct operations and partnerships</div>
+                    <div class="slide6-stat-card animate delay-3" style="border-left-color: var(--orn-blue);">
+                        <div class="slide6-stat-number" style="color: var(--orn-blue);">104</div>
+                        <div class="slide6-stat-label">Nationalities</div>
+                        <div class="slide6-stat-desc">Diverse global customer base served</div>
                     </div>
                     
-                    <div class="presence-card animate delay-4" style="border-left-color: var(--orn-green);">
-                        <div class="presence-number">104</div>
-                        <div class="presence-label">Nationalities Served</div>
-                        <div class="presence-desc">Diverse global customer base</div>
+                    <div class="slide6-stat-card animate delay-4" style="border-left-color: var(--orn-green);">
+                        <div class="slide6-stat-number" style="color: var(--orn-green);">200</div>
+                        <div class="slide6-stat-label">Markets Modeled</div>
+                        <div class="slide6-stat-desc">AI-powered destination intelligence</div>
                     </div>
                     
-                    <div class="presence-card animate delay-4" style="border-left-color: var(--orn-orange);">
-                        <div class="presence-number">200</div>
-                        <div class="presence-label">Markets Modeled</div>
-                        <div class="presence-desc">AI-powered destination intelligence</div>
+                    <div class="slide6-stat-card animate delay-4" style="border-left-color: var(--orn-orange);">
+                        <div class="slide6-stat-number" style="color: var(--orn-orange);">$0.9T</div>
+                        <div class="slide6-stat-label">Market Coverage</div>
+                        <div class="slide6-stat-desc">Addressable global travel spend</div>
                     </div>
                 </div>
             </div>
             
-            <div class="animate delay-4" style="margin-top: 25px;">
-                <div class="text-box-light" style="padding: 20px 30px;">
-                    <span style="color: var(--orn-navy); font-weight: 700; font-size: 14px;">Key Markets: </span>
-                    <div class="key-markets-list">
-                        <span class="market-tag">India</span>
-                        <span class="market-tag">UAE</span>
-                        <span class="market-tag">United Kingdom</span>
-                        <span class="market-tag">Australia</span>
-                        <span class="market-tag">Singapore</span>
-                        <span class="market-tag">USA</span>
-                        <span class="market-tag">Thailand</span>
-                        <span class="market-tag">Turkey</span>
-                        <span class="market-tag">Germany</span>
-                        <span class="market-tag">France</span>
+            <div class="slide6-footer animate delay-4">
+                <div class="slide6-footer-row">
+                    <div class="slide6-hubs">
+                        <strong>Key Hubs:</strong> London • Dubai • Mumbai • Singapore • New York
+                    </div>
+                    <div class="slide6-markets">
+                        <span class="slide6-market-tag">India</span>
+                        <span class="slide6-market-tag">UAE</span>
+                        <span class="slide6-market-tag">UK</span>
+                        <span class="slide6-market-tag">Australia</span>
+                        <span class="slide6-market-tag">USA</span>
+                        <span class="slide6-market-tag">Thailand</span>
                     </div>
                 </div>
             </div>
@@ -1538,10 +1475,10 @@
 
     <!-- SLIDE 7: WHY WORK WITH US - TROPICAL BEACH -->
     <div class="slide" id="slide7">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Tropical Beach Sunset" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Tropical Beach" class="bg-image">
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1551,16 +1488,16 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">07 / 12</span>
+            <span class="slide-number slide-number-dark">07 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 700px;">
+            <div class="text-box animate delay-1" style="max-width: 600px;">
                 <h3>Partnership</h3>
-                <h1>Why Work With Us</h1>
-                <p class="subtitle">We complete the ecosystem—we don't compete with it</p>
+                <h1 style="color: var(--orn-navy);">Why Work With Us</h1>
+                <p class="subtitle" style="color: #555;">We complete the ecosystem—we don't compete with it</p>
             </div>
             
             <div class="four-column animate delay-2">
@@ -1606,7 +1543,7 @@
                 </div>
             </div>
             
-            <div class="quote animate delay-4" style="margin-top: 25px;">
+            <div class="quote animate delay-4" style="margin-top: 20px;">
                 <strong>The Partnership Philosophy:</strong> "You have created infrastructure for hospitality. We have created infrastructure for tourism. That's why we work together."
             </div>
         </div>
@@ -1614,10 +1551,10 @@
 
     <!-- SLIDE 8: TRACTION - SUNRISE CITY -->
     <div class="slide" id="slide8">
-        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="City at Sunrise" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=80" alt="City Sunrise" class="bg-image">
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1627,16 +1564,16 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">08 / 12</span>
+            <span class="slide-number slide-number-dark">08 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 700px;">
+            <div class="text-box animate delay-1" style="max-width: 600px;">
                 <h3>Proof Points</h3>
-                <h1>The Numbers Speak</h1>
-                <p class="subtitle">Unit economics that defy industry norms</p>
+                <h1 style="color: var(--orn-navy);">The Numbers Speak</h1>
+                <p class="subtitle" style="color: #555;">Unit economics that defy industry norms</p>
             </div>
             
             <div class="traction-grid animate delay-2">
@@ -1657,7 +1594,7 @@
                 </div>
             </div>
             
-            <div class="metrics-grid animate delay-3" style="margin-top: 25px;">
+            <div class="metrics-grid animate delay-3" style="margin-top: 20px;">
                 <div class="metric-card">
                     <div class="metric-value">98%</div>
                     <div class="metric-label">5-Star Reviews</div>
@@ -1676,18 +1613,18 @@
                 </div>
             </div>
             
-            <div class="quote animate delay-4" style="margin-top: 20px;">
+            <div class="quote animate delay-4" style="margin-top: 18px;">
                 <strong>Every customer acquired is profitable.</strong> With CAC of just 1% of GMV and LTV exceeding $2,000, we recover acquisition costs in the first transaction.
             </div>
         </div>
     </div>
 
-    <!-- SLIDE 9: THE TEAM - MODERN OFFICE -->
+    <!-- SLIDE 9: THE TEAM - MODERN OFFICE BRIGHT -->
     <div class="slide" id="slide9">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Modern Office" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80" alt="Modern Office Bright" class="bg-image">
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1697,16 +1634,16 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">09 / 12</span>
+            <span class="slide-number slide-number-dark">09 / 12</span>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 800px;">
+            <div class="text-box animate delay-1" style="max-width: 700px;">
                 <h3>The Team</h3>
-                <h1>Built by Those Who Have<br>Done It Before</h1>
-                <p class="subtitle">World-class operators who understand infrastructure at scale</p>
+                <h1 style="color: var(--orn-navy);">Built by Those Who Have<br>Done It Before</h1>
+                <p class="subtitle" style="color: #555;">World-class operators who understand infrastructure at scale</p>
             </div>
             
             <div class="team-grid animate delay-2">
@@ -1742,7 +1679,7 @@
                 </div>
             </div>
             
-            <div class="quote animate delay-4" style="margin-top: 25px;">
+            <div class="quote animate delay-4" style="margin-top: 20px;">
                 <strong>Board of Billionaires:</strong> Michael Durham (ex-CEO Sabre), Ninan Chacko (ex-CEO Travel Leaders Group), Andrew McEvoy (ex-MD Tourism Australia), Swami Swaminathan (ex-MD Infosys BPO), KK Menon (Kanoo Group). They understand: <em>this is not a travel company. This is principal infrastructure.</em>
             </div>
         </div>
@@ -1751,9 +1688,9 @@
     <!-- SLIDE 10: THE VISION - AERIAL COASTLINE -->
     <div class="slide" id="slide10">
         <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=1920&q=80" alt="Aerial Coastline" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1763,28 +1700,28 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <span class="slide-number">10 / 12</span>
+            <span class="slide-number slide-number-dark">10 / 12</span>
         </div>
         
         <div class="content" style="text-align: center;">
-            <div class="text-box animate delay-1" style="max-width: 900px; margin: 0 auto;">
+            <div class="text-box animate delay-1" style="max-width: 800px; margin: 0 auto;">
                 <h3>The Vision Realized</h3>
-                <div style="font-size: 52px; font-weight: 900; line-height: 1.1; margin: 20px 0; color: var(--orn-navy);">
+                <div style="font-size: 38px; font-weight: 900; line-height: 1.1; margin: 15px 0; color: var(--orn-navy);">
                     The <span style="color: var(--orn-cyan);">Internet</span><br>
                     for Tourism
                 </div>
-                <p style="font-size: 18px; color: #555; max-width: 700px; margin: 0 auto; line-height: 1.5;">
+                <p style="font-size: 15px; color: #555; max-width: 600px; margin: 0 auto; line-height: 1.5;">
                     A traveler-centric ecosystem where <strong>1 billion travelers annually</strong> find, create, and execute personalized journeys—
                     not through static packages, but through <span style="color: var(--orn-cyan); font-weight: 700;">living infrastructure</span>.
                 </p>
             </div>
             
-            <div class="two-column" style="margin-top: 40px; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;">
+            <div class="two-column" style="margin-top: 30px; text-align: left; max-width: 900px; margin-left: auto; margin-right: auto;">
                 <div class="litmus-test-box animate delay-3">
                     <h2>Why We Win</h2>
-                    <div style="color: #555; line-height: 2.2; font-size: 15px;">
+                    <div style="color: #555; line-height: 2; font-size: 13px;">
                         • <strong style="color: var(--orn-navy);">Ecosystem</strong> vs. People Ocean<br>
                         • <strong style="color: var(--orn-navy);">Systems</strong> vs. Static Chains<br>
                         • <strong style="color: var(--orn-navy);">Mathematical</strong> vs. Manual<br>
@@ -1794,7 +1731,7 @@
                 </div>
                 <div class="litmus-test-box animate delay-4">
                     <h2>The Litmus Test</h2>
-                    <div style="color: #555; font-size: 15px; line-height: 1.7; font-style: italic;">
+                    <div style="color: #555; font-size: 13px; line-height: 1.6; font-style: italic;">
                         "If all employees don't come to work tomorrow, traditional companies die. The ORN ecosystem knows how to create its own demand, holidays, advice, and delivery—it would train its own experts. <strong style="color: var(--orn-cyan); font-style: normal;">That's infrastructure.</strong>"
                     </div>
                 </div>
@@ -1805,9 +1742,9 @@
     <!-- SLIDE 11: THE ASK - SUNSET HORIZON -->
     <div class="slide" id="slide11">
         <img src="https://images.unsplash.com/photo-1495616811223-4d98c6e9d869?w=1920&q=80" alt="Sunset Horizon" class="bg-image">
-        <div class="bg-overlay bg-overlay-medium"></div>
+        <div class="bg-overlay bg-overlay-light"></div>
         
-        <div class="header">
+        <div class="header header-dark">
             <div class="orn-logo-css">
                 <div class="orn-bars">
                     <div class="orn-bar"></div>
@@ -1817,19 +1754,19 @@
                     <div class="orn-bar"></div>
                     <div class="orn-bar"></div>
                 </div>
-                <div class="orn-text-logo">ORN</div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <div style="display: flex; align-items: center; gap: 20px;">
-                <span class="tf-logo-css">Trip<span>Factory</span></span>
-                <span class="slide-number">11 / 12</span>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span class="tf-logo-css" style="color: #1a1a1a;">Trip<span style="color: var(--orn-cyan);">Factory</span></span>
+                <span class="slide-number slide-number-dark">11 / 12</span>
             </div>
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 800px;">
+            <div class="text-box animate delay-1" style="max-width: 700px;">
                 <h3>The Opportunity</h3>
-                <h1 style="font-size: 44px;">Enabling the $2 Trillion<br>Tourism Economy</h1>
-                <p style="color: #555; font-size: 18px; margin-bottom: 20px;">Path to $100B+ market cap through infrastructure dominance</p>
+                <h1 style="font-size: 32px; color: var(--orn-navy);">Enabling the $2 Trillion<br>Tourism Economy</h1>
+                <p style="color: #555; font-size: 15px; margin-bottom: 15px;">Path to $100B+ market cap through infrastructure dominance</p>
             </div>
             
             <div class="metrics-grid animate delay-2">
@@ -1857,7 +1794,7 @@
                 <div class="final-statement-line3">"We will be the largest travel firm on the planet in 5-7 years"</div>
             </div>
             
-            <div class="two-column animate delay-4" style="margin-top: 25px;">
+            <div class="two-column animate delay-4" style="margin-top: 20px;">
                 <div class="join-box">
                     <strong>Join Us:</strong>
                     <span>Whether you are an airline, hotel, tourism board, or investor—if you understand that tourism needs infrastructure, not another booking site, we should talk.</span>
@@ -1875,9 +1812,9 @@
         </div>
     </div>
 
-    <!-- SLIDE 12: THANK YOU / CLOSING - BEAUTIFUL LANDSCAPE -->
+    <!-- SLIDE 12: THANK YOU / CLOSING - OPEN ROAD -->
     <div class="slide" id="slide12">
-        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" alt="Beautiful Landscape" class="bg-image">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80" alt="Beautiful Landscape Road" class="bg-image">
         <div class="bg-overlay"></div>
         
         <div class="header">
@@ -1897,22 +1834,22 @@
         
         <div class="content" style="text-align: center; justify-content: center;">
             <div class="animate delay-1">
-                <div style="font-size: 72px; font-weight: 900; color: white; margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                <div style="font-size: 56px; font-weight: 900; color: white; margin-bottom: 15px; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">
                     Thank You
                 </div>
-                <div style="font-size: 28px; color: var(--orn-cyan); font-weight: 600; margin-bottom: 40px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                <div style="font-size: 22px; color: var(--orn-cyan); font-weight: 600; margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
                     Let's Build the Future of Tourism
                 </div>
             </div>
             
-            <div class="animate delay-2" style="display: flex; gap: 40px; justify-content: center; margin-top: 40px;">
-                <div style="text-align: center; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.3);">
-                    <div style="font-size: 14px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Contact</div>
-                    <div style="font-size: 20px; color: white; font-weight: 600;">ornvacations.com</div>
+            <div class="animate delay-2" style="display: flex; gap: 30px; justify-content: center; margin-top: 30px;">
+                <div style="text-align: center; background: rgba(255,255,255,0.95); padding: 25px 35px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 6px 24px rgba(0,0,0,0.2);">
+                    <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Contact</div>
+                    <div style="font-size: 18px; color: var(--orn-navy); font-weight: 600;">ornvacations.com</div>
                 </div>
-                <div style="text-align: center; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px 40px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.3);">
-                    <div style="font-size: 14px; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Powered By</div>
-                    <div style="font-size: 20px; color: white; font-weight: 600;">TripFactory</div>
+                <div style="text-align: center; background: rgba(255,255,255,0.95); padding: 25px 35px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 6px 24px rgba(0,0,0,0.2);">
+                    <div style="font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Powered By</div>
+                    <div style="font-size: 18px; color: var(--orn-navy); font-weight: 600;">TripFactory</div>
                 </div>
             </div>
         </div>
