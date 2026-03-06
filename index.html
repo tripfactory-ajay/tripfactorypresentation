@@ -928,11 +928,11 @@
         /* SLIDE 6 SPECIFIC - OPTIMIZED FOR A4 LANDSCAPE */
         .slide6-container {
             display: grid;
-            grid-template-columns: 1.4fr 1fr;
+            grid-template-columns: 1.3fr 1fr;
             gap: 20px;
             align-items: start;
-            height: calc(100% - 80px);
-            margin-top: 10px;
+            height: calc(100% - 70px);
+            margin-top: 8px;
         }
 
         .slide6-map-section {
@@ -952,6 +952,7 @@
             align-items: center;
             justify-content: center;
             min-height: 0;
+            border: 2px solid #e2e8f0;
         }
 
         .slide6-map-image {
@@ -975,86 +976,114 @@
             padding: 20px;
         }
 
-        .slide6-stats-section {
+        .slide6-right-section {
             display: flex;
             flex-direction: column;
             gap: 12px;
             height: 100%;
         }
 
-        .slide6-stat-card {
+        .slide6-table-container {
             background: rgba(255,255,255,0.98);
-            border-radius: 10px;
-            padding: 16px;
-            border-left: 4px solid var(--orn-cyan);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            overflow: hidden;
         }
 
-        .slide6-stat-number {
-            font-size: 36px;
-            font-weight: 900;
+        .slide6-table-title {
+            font-size: 13px;
+            font-weight: 800;
             color: var(--orn-navy);
-            line-height: 1;
-            margin-bottom: 6px;
-        }
-
-        .slide6-stat-label {
-            font-size: 12px;
-            color: #666;
-            font-weight: 700;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .slide6-stat-desc {
-            font-size: 11px;
-            color: #888;
-            margin-top: 6px;
-            line-height: 1.4;
+        .slide6-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
         }
 
-        .slide6-footer {
-            margin-top: 12px;
-            background: rgba(255,255,255,0.98);
-            padding: 12px 16px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .slide6-table th {
+            background: var(--orn-navy);
+            color: white;
+            padding: 8px 6px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .slide6-footer-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
+        .slide6-table td {
+            padding: 8px 6px;
+            border-bottom: 1px solid #e8e8e8;
+            color: #333;
         }
 
-        .slide6-hubs {
-            font-size: 12px;
-            color: #555;
+        .slide6-table tr:nth-child(even) {
+            background: #f8f9fa;
         }
 
-        .slide6-hubs strong {
+        .slide6-table tr:hover {
+            background: #e6f7f9;
+        }
+
+        .slide6-location {
+            font-weight: 700;
             color: var(--orn-navy);
         }
 
-        .slide6-markets {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
+        .slide6-spend {
+            font-weight: 700;
+            color: var(--orn-cyan);
+            font-size: 11px;
         }
 
-        .slide6-market-tag {
-            background: var(--orn-cyan);
+        .slide6-markets {
+            font-size: 9px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .slide6-footer-banner {
+            background: linear-gradient(135deg, var(--orn-navy) 0%, #2c5282 100%);
             color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 10px;
-            font-weight: 600;
+            padding: 12px 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .slide6-footer-stat {
+            text-align: center;
+        }
+
+        .slide6-footer-number {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--orn-cyan);
+            line-height: 1;
+        }
+
+        .slide6-footer-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .slide6-footer-divider {
+            width: 1px;
+            height: 30px;
+            background: rgba(255,255,255,0.3);
         }
     </style>
 </head>
@@ -1393,7 +1422,7 @@
         </div>
     </div>
 
-    <!-- SLIDE 6: GLOBAL PRESENCE - OPTIMIZED FOR A4 LANDSCAPE -->
+    <!-- SLIDE 6: GLOBAL PRESENCE - MAP + MARKET OPPORTUNITY TABLE -->
     <div class="slide" id="slide6">
         <div class="header header-dark">
             <div class="orn-logo-css">
@@ -1411,10 +1440,10 @@
         </div>
         
         <div class="content">
-            <div class="text-box animate delay-1" style="max-width: 500px; margin-bottom: 12px; padding: 15px 20px;">
-                <h3 style="margin-bottom: 5px;">Global Presence</h3>
-                <h1 style="color: var(--orn-navy); font-size: 28px; margin-bottom: 5px;">We Have the World Covered</h1>
-                <p class="subtitle" style="color: #555; font-size: 13px;">Infrastructure that spans continents, cultures, and currencies</p>
+            <div class="text-box animate delay-1" style="max-width: 600px; margin-bottom: 10px; padding: 12px 18px;">
+                <h3 style="margin-bottom: 4px;">Global Presence</h3>
+                <h1 style="color: var(--orn-navy); font-size: 26px; margin-bottom: 4px;">We Are Where the Money Is</h1>
+                <p class="subtitle" style="color: #555; font-size: 12px;">Strategic hubs in the world's highest-value travel markets</p>
             </div>
             
             <div class="slide6-container animate delay-2">
@@ -1422,51 +1451,79 @@
                     <div class="slide6-map-wrapper">
                         <img src="global-map.png" alt="ORN Global Map" class="slide6-map-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="slide6-map-fallback">
-                            [Global Map Image]<br>
-                            <span style="font-size: 12px; opacity: 0.8;">global-map.png</span>
+                            [ORN Global Operations Map]<br>
+                            <span style="font-size: 11px; opacity: 0.8;">40+ Countries • 5 Strategic Hubs</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="slide6-stats-section">
-                    <div class="slide6-stat-card animate delay-3">
-                        <div class="slide6-stat-number" style="color: var(--orn-cyan);">40+</div>
-                        <div class="slide6-stat-label">Countries</div>
-                        <div class="slide6-stat-desc">Direct operations across 5 continents</div>
+                <div class="slide6-right-section">
+                    <div class="slide6-table-container animate delay-3">
+                        <div class="slide6-table-title">ORN Hubs & Market Opportunity</div>
+                        <table class="slide6-table">
+                            <thead>
+                                <tr>
+                                    <th>Hub</th>
+                                    <th>Region</th>
+                                    <th>Market Spend</th>
+                                    <th>Key Markets Served</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="slide6-location">London</td>
+                                    <td>Europe</td>
+                                    <td class="slide6-spend">$285B+</td>
+                                    <td class="slide6-markets">UK $52B, Spain $74B, France $67B, Germany $43B, Italy $49B</td>
+                                </tr>
+                                <tr>
+                                    <td class="slide6-location">Dubai</td>
+                                    <td>Middle East</td>
+                                    <td class="slide6-spend">$58B+</td>
+                                    <td class="slide6-markets">UAE $21B, Saudi Arabia $12B, Turkey $25B, Qatar $6B, Jordan $5B</td>
+                                </tr>
+                                <tr>
+                                    <td class="slide6-location">Mumbai</td>
+                                    <td>South Asia</td>
+                                    <td class="slide6-spend">$33B+</td>
+                                    <td class="slide6-markets">India $29B, Sri Lanka $4B, Bangladesh, Nepal, Bhutan</td>
+                                </tr>
+                                <tr>
+                                    <td class="slide6-location">Singapore</td>
+                                    <td>Asia-Pacific</td>
+                                    <td class="slide6-spend">$128B+</td>
+                                    <td class="slide6-markets">Thailand $63B, China $40B, Malaysia $19B, Indonesia $14B, Vietnam $10B</td>
+                                </tr>
+                                <tr>
+                                    <td class="slide6-location">New York</td>
+                                    <td>Americas</td>
+                                    <td class="slide6-spend">$259B+</td>
+                                    <td class="slide6-markets">USA $214B, Canada $22B, Mexico $23B, Caribbean, Latin America</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
-                    <div class="slide6-stat-card animate delay-3" style="border-left-color: var(--orn-blue);">
-                        <div class="slide6-stat-number" style="color: var(--orn-blue);">104</div>
-                        <div class="slide6-stat-label">Nationalities</div>
-                        <div class="slide6-stat-desc">Diverse global customer base served</div>
-                    </div>
-                    
-                    <div class="slide6-stat-card animate delay-4" style="border-left-color: var(--orn-green);">
-                        <div class="slide6-stat-number" style="color: var(--orn-green);">200</div>
-                        <div class="slide6-stat-label">Markets Modeled</div>
-                        <div class="slide6-stat-desc">AI-powered destination intelligence</div>
-                    </div>
-                    
-                    <div class="slide6-stat-card animate delay-4" style="border-left-color: var(--orn-orange);">
-                        <div class="slide6-stat-number" style="color: var(--orn-orange);">$0.9T</div>
-                        <div class="slide6-stat-label">Market Coverage</div>
-                        <div class="slide6-stat-desc">Addressable global travel spend</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="slide6-footer animate delay-4">
-                <div class="slide6-footer-row">
-                    <div class="slide6-hubs">
-                        <strong>Key Hubs:</strong> London • Dubai • Mumbai • Singapore • New York
-                    </div>
-                    <div class="slide6-markets">
-                        <span class="slide6-market-tag">India</span>
-                        <span class="slide6-market-tag">UAE</span>
-                        <span class="slide6-market-tag">UK</span>
-                        <span class="slide6-market-tag">Australia</span>
-                        <span class="slide6-market-tag">USA</span>
-                        <span class="slide6-market-tag">Thailand</span>
+                    <div class="slide6-footer-banner animate delay-4">
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number">40+</div>
+                            <div class="slide6-footer-label">Countries</div>
+                        </div>
+                        <div class="slide6-footer-divider"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number">$763B+</div>
+                            <div class="slide6-footer-label">Market Coverage</div>
+                        </div>
+                        <div class="slide6-footer-divider"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number">85%</div>
+                            <div class="slide6-footer-label">of Global TAM</div>
+                        </div>
+                        <div class="slide6-footer-divider"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number">104</div>
+                            <div class="slide6-footer-label">Nationalities</div>
+                        </div>
                     </div>
                 </div>
             </div>
