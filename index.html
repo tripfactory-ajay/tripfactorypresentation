@@ -928,8 +928,8 @@
         /* SLIDE 6 SPECIFIC - OPTIMIZED FOR A4 LANDSCAPE */
         .slide6-container {
             display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 15px;
             align-items: start;
             height: calc(100% - 70px);
             margin-top: 8px;
@@ -979,14 +979,14 @@
         .slide6-right-section {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             height: 100%;
         }
 
         .slide6-table-container {
             background: rgba(255,255,255,0.98);
             border-radius: 12px;
-            padding: 15px;
+            padding: 12px;
             border: 1px solid #e0e0e0;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
             flex: 1;
@@ -994,10 +994,10 @@
         }
 
         .slide6-table-title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 800;
             color: var(--orn-navy);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -1053,7 +1053,7 @@
         .slide6-footer-banner {
             background: linear-gradient(135deg, var(--orn-navy) 0%, #2c5282 100%);
             color: white;
-            padding: 12px 18px;
+            padding: 10px 15px;
             border-radius: 10px;
             display: flex;
             justify-content: space-between;
@@ -1066,14 +1066,14 @@
         }
 
         .slide6-footer-number {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
             color: var(--orn-cyan);
             line-height: 1;
         }
 
         .slide6-footer-label {
-            font-size: 9px;
+            font-size: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             opacity: 0.9;
@@ -1082,8 +1082,112 @@
 
         .slide6-footer-divider {
             width: 1px;
-            height: 30px;
+            height: 25px;
             background: rgba(255,255,255,0.3);
+        }
+
+        /* Additional Slide 6 Styles for Expanded Table */
+        .slide6-hub-section {
+            margin-bottom: 4px;
+        }
+
+        .slide6-country-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        .slide6-country-table td {
+            padding: 4px 6px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .slide6-country {
+            font-weight: 600;
+            color: #333;
+            font-size: 10px;
+        }
+
+        .slide6-flag {
+            font-size: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .slide6-spend-cell {
+            font-weight: 700;
+            color: var(--orn-cyan);
+            font-size: 11px;
+            text-align: right;
+        }
+
+        .slide6-subtotal td {
+            background: #fafafa;
+            border-bottom: none;
+            padding: 3px 6px;
+        }
+
+        .slide6-hub-section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* NEW: Global Coverage Key Point Box */
+        .slide6-coverage-box {
+            background: linear-gradient(135deg, var(--orn-cyan) 0%, var(--orn-blue) 100%);
+            color: white;
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 16px rgba(0,188,212,0.3);
+        }
+
+        .slide6-coverage-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            opacity: 0.95;
+        }
+
+        .slide6-coverage-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slide6-coverage-stat {
+            text-align: center;
+        }
+
+        .slide6-coverage-number {
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+
+        .slide6-coverage-label {
+            font-size: 9px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .slide6-coverage-divider {
+            width: 1px;
+            height: 35px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        .slide6-coverage-context {
+            font-size: 10px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            line-height: 1.4;
+            opacity: 0.95;
         }
     </style>
 </head>
@@ -1422,189 +1526,169 @@
         </div>
     </div>
 
- <!-- SLIDE 6: GLOBAL PRESENCE - MAP + EXPANDED MARKET TABLE -->
-<div class="slide" id="slide6">
-    <div class="header header-dark">
-        <div class="orn-logo-css">
-            <div class="orn-bars">
-                <div class="orn-bar"></div>
-                <div class="orn-bar"></div>
-                <div class="orn-bar"></div>
-                <div class="orn-bar"></div>
-                <div class="orn-bar"></div>
-                <div class="orn-bar"></div>
+    <!-- SLIDE 6: GLOBAL PRESENCE - MAP + EXPANDED MARKET TABLE -->
+    <div class="slide" id="slide6">
+        <div class="header header-dark">
+            <div class="orn-logo-css">
+                <div class="orn-bars">
+                    <div class="orn-bar"></div>
+                    <div class="orn-bar"></div>
+                    <div class="orn-bar"></div>
+                    <div class="orn-bar"></div>
+                    <div class="orn-bar"></div>
+                    <div class="orn-bar"></div>
+                </div>
+                <div class="orn-text-logo orn-text-logo-dark">ORN</div>
             </div>
-            <div class="orn-text-logo orn-text-logo-dark">ORN</div>
-        </div>
-        <span class="slide-number slide-number-dark">06 / 12</span>
-    </div>
-    
-    <div class="content">
-        <div class="text-box animate delay-1" style="max-width: 700px; margin-bottom: 8px; padding: 12px 18px;">
-            <h3 style="margin-bottom: 4px;">Global Presence</h3>
-            <h1 style="color: var(--orn-navy); font-size: 26px; margin-bottom: 4px;">We Are Where the Money Is</h1>
-            <p class="subtitle" style="color: #555; font-size: 12px;">Strategic hubs covering $763B+ of global travel spend across 40+ countries</p>
+            <span class="slide-number slide-number-dark">06 / 12</span>
         </div>
         
-        <div class="slide6-container animate delay-2" style="grid-template-columns: 1.1fr 1fr; gap: 15px;">
-            <div class="slide6-map-section">
-                <div class="slide6-map-wrapper" style="min-height: 320px;">
-                    <img src="global-map.png" alt="ORN Global Map" class="slide6-map-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="slide6-map-fallback">
-                        [ORN Global Operations Map]<br>
-                        <span style="font-size: 11px; opacity: 0.8;">40+ Countries • 5 Strategic Hubs</span>
-                    </div>
-                </div>
+        <div class="content">
+            <div class="text-box animate delay-1" style="max-width: 700px; margin-bottom: 8px; padding: 12px 18px;">
+                <h3 style="margin-bottom: 4px;">Global Presence</h3>
+                <h1 style="color: var(--orn-navy); font-size: 26px; margin-bottom: 4px;">We Are Where the Money Is</h1>
+                <p class="subtitle" style="color: #555; font-size: 12px;">Strategic hubs covering $763B+ of global travel spend across 40+ countries</p>
             </div>
             
-            <div class="slide6-right-section">
-                <div class="slide6-table-container animate delay-3" style="padding: 12px;">
-                    <div class="slide6-table-title" style="font-size: 12px; margin-bottom: 8px;">ORN Operations & Market Value by Country</div>
+            <div class="slide6-container animate delay-2">
+                <div class="slide6-map-section">
+                    <div class="slide6-map-wrapper" style="min-height: 320px;">
+                        <img src="global-map.png" alt="ORN Global Map" class="slide6-map-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="slide6-map-fallback">
+                            [ORN Global Operations Map]<br>
+                            <span style="font-size: 11px; opacity: 0.8;">40+ Countries • 5 Strategic Hubs</span>
+                        </div>
+                    </div>
                     
-                    <!-- Europe Hub -->
-                    <div class="slide6-hub-section">
-                        <div class="slide6-hub-header" style="background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; font-size: 11px;">🇬🇧 LONDON HUB — Europe</span>
-                            <span style="font-size: 11px; color: var(--orn-cyan); font-weight: 700;">$285B+</span>
+                    <!-- NEW: Global Coverage Key Point Box -->
+                    <div class="slide6-coverage-box animate delay-3" style="margin-top: 10px;">
+                        <div class="slide6-coverage-title">🌍 Global Market Coverage</div>
+                        <div class="slide6-coverage-stats">
+                            <div class="slide6-coverage-stat">
+                                <div class="slide6-coverage-number">$763B</div>
+                                <div class="slide6-coverage-label">ORN Coverage</div>
+                            </div>
+                            <div class="slide6-coverage-divider"></div>
+                            <div class="slide6-coverage-stat">
+                                <div class="slide6-coverage-number">$900B</div>
+                                <div class="slide6-coverage-label">Global TAM</div>
+                            </div>
+                            <div class="slide6-coverage-divider"></div>
+                            <div class="slide6-coverage-stat">
+                                <div class="slide6-coverage-number">85%</div>
+                                <div class="slide6-coverage-label">Market Share</div>
+                            </div>
                         </div>
-                        <table class="slide6-table slide6-country-table">
-                            <tr><td class="slide6-country">United Kingdom</td><td class="slide6-flag">🇬🇧</td><td class="slide6-spend-cell">$52B</td></tr>
-                            <tr><td class="slide6-country">Spain</td><td class="slide6-flag">🇪🇸</td><td class="slide6-spend-cell">$74B</td></tr>
-                            <tr><td class="slide6-country">France</td><td class="slide6-flag">🇫🇷</td><td class="slide6-spend-cell">$67B</td></tr>
-                            <tr><td class="slide6-country">Germany</td><td class="slide6-flag">🇩🇪</td><td class="slide6-spend-cell">$43B</td></tr>
-                            <tr><td class="slide6-country">Italy</td><td class="slide6-flag">🇮🇹</td><td class="slide6-spend-cell">$49B</td></tr>
-                            <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Netherlands, Switzerland, Austria, Belgium, Portugal, Greece, Scandinavia...</td><td style="font-size: 10px; color: #888;">15+ countries</td></tr>
-                        </table>
-                    </div>
-
-                    <!-- Middle East Hub -->
-                    <div class="slide6-hub-section" style="margin-top: 8px;">
-                        <div class="slide6-hub-header" style="background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; font-size: 11px;">🇦🇪 DUBAI HUB — Middle East</span>
-                            <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$58B+</span>
+                        <div class="slide6-coverage-context">
+                            <strong>We cover 85% of the world's addressable travel market.</strong> Our 5 strategic hubs are positioned in the highest-value tourism corridors, giving us unmatched access to $763B of the $900B global travel economy.
                         </div>
-                        <table class="slide6-table slide6-country-table">
-                            <tr><td class="slide6-country">United Arab Emirates</td><td class="slide6-flag">🇦🇪</td><td class="slide6-spend-cell">$21B</td></tr>
-                            <tr><td class="slide6-country">Turkey</td><td class="slide6-flag">🇹🇷</td><td class="slide6-spend-cell">$25B</td></tr>
-                            <tr><td class="slide6-country">Saudi Arabia</td><td class="slide6-flag">🇸🇦</td><td class="slide6-spend-cell">$12B</td></tr>
-                            <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Qatar, Jordan, Oman, Bahrain, Kuwait...</td><td style="font-size: 10px; color: #888;">8+ countries</td></tr>
-                        </table>
-                    </div>
-
-                    <!-- South Asia Hub -->
-                    <div class="slide6-hub-section" style="margin-top: 8px;">
-                        <div class="slide6-hub-header" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; font-size: 11px;">🇮🇳 MUMBAI HUB — South Asia</span>
-                            <span style="font-size: 11px; color: #fff; font-weight: 700;">$33B+</span>
-                        </div>
-                        <table class="slide6-table slide6-country-table">
-                            <tr><td class="slide6-country">India</td><td class="slide6-flag">🇮🇳</td><td class="slide6-spend-cell">$29B</td></tr>
-                            <tr><td class="slide6-country">Sri Lanka</td><td class="slide6-flag">🇱🇰</td><td class="slide6-spend-cell">$4B</td></tr>
-                            <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Nepal, Bangladesh, Bhutan, Maldives...</td><td style="font-size: 10px; color: #888;">5+ countries</td></tr>
-                        </table>
-                    </div>
-
-                    <!-- Asia-Pacific Hub -->
-                    <div class="slide6-hub-section" style="margin-top: 8px;">
-                        <div class="slide6-hub-header" style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; font-size: 11px;">🇸🇬 SINGAPORE HUB — Asia-Pacific</span>
-                            <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$128B+</span>
-                        </div>
-                        <table class="slide6-table slide6-country-table">
-                            <tr><td class="slide6-country">Thailand</td><td class="slide6-flag">🇹🇭</td><td class="slide6-spend-cell">$63B</td></tr>
-                            <tr><td class="slide6-country">China</td><td class="slide6-flag">🇨🇳</td><td class="slide6-spend-cell">$40B</td></tr>
-                            <tr><td class="slide6-country">Hong Kong</td><td class="slide6-flag">🇭🇰</td><td class="slide6-spend-cell">$37B</td></tr>
-                            <tr><td class="slide6-country">Australia</td><td class="slide6-flag">🇦🇺</td><td class="slide6-spend-cell">$45B</td></tr>
-                            <tr><td class="slide6-country">Malaysia</td><td class="slide6-flag">🇲🇾</td><td class="slide6-spend-cell">$19B</td></tr>
-                            <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Indonesia, Vietnam, Philippines, Japan, South Korea, Taiwan...</td><td style="font-size: 10px; color: #888;">12+ countries</td></tr>
-                        </table>
-                    </div>
-
-                    <!-- Americas Hub -->
-                    <div class="slide6-hub-section" style="margin-top: 8px;">
-                        <div class="slide6-hub-header" style="background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-weight: 700; font-size: 11px;">🇺🇸 NEW YORK HUB — Americas</span>
-                            <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$259B+</span>
-                        </div>
-                        <table class="slide6-table slide6-country-table">
-                            <tr><td class="slide6-country">United States</td><td class="slide6-flag">🇺🇸</td><td class="slide6-spend-cell">$214B</td></tr>
-                            <tr><td class="slide6-country">Canada</td><td class="slide6-flag">🇨🇦</td><td class="slide6-spend-cell">$22B</td></tr>
-                            <tr><td class="slide6-country">Mexico</td><td class="slide6-flag">🇲🇽</td><td class="slide6-spend-cell">$23B</td></tr>
-                            <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Brazil, Caribbean, Colombia, Argentina, Peru, Chile...</td><td style="font-size: 10px; color: #888;">15+ countries</td></tr>
-                        </table>
                     </div>
                 </div>
                 
-                <div class="slide6-footer-banner animate delay-4" style="padding: 10px 15px; margin-top: 8px;">
-                    <div class="slide6-footer-stat">
-                        <div class="slide6-footer-number" style="font-size: 22px;">40+</div>
-                        <div class="slide6-footer-label" style="font-size: 8px;">Countries</div>
+                <div class="slide6-right-section">
+                    <div class="slide6-table-container animate delay-3" style="padding: 12px;">
+                        <div class="slide6-table-title" style="font-size: 12px; margin-bottom: 8px;">ORN Operations & Market Value by Country</div>
+                        
+                        <!-- Europe Hub -->
+                        <div class="slide6-hub-section">
+                            <div class="slide6-hub-header" style="background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 11px;">🇬🇧 LONDON HUB — Europe</span>
+                                <span style="font-size: 11px; color: var(--orn-cyan); font-weight: 700;">$285B+</span>
+                            </div>
+                            <table class="slide6-table slide6-country-table">
+                                <tr><td class="slide6-country">United Kingdom</td><td class="slide6-flag">🇬🇧</td><td class="slide6-spend-cell">$52B</td></tr>
+                                <tr><td class="slide6-country">Spain</td><td class="slide6-flag">🇪🇸</td><td class="slide6-spend-cell">$74B</td></tr>
+                                <tr><td class="slide6-country">France</td><td class="slide6-flag">🇫🇷</td><td class="slide6-spend-cell">$67B</td></tr>
+                                <tr><td class="slide6-country">Germany</td><td class="slide6-flag">🇩🇪</td><td class="slide6-spend-cell">$43B</td></tr>
+                                <tr><td class="slide6-country">Italy</td><td class="slide6-flag">🇮🇹</td><td class="slide6-spend-cell">$49B</td></tr>
+                                <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Netherlands, Switzerland, Austria, Belgium, Portugal, Greece, Scandinavia...</td><td style="font-size: 10px; color: #888;">15+ countries</td></tr>
+                            </table>
+                        </div>
+
+                        <!-- Middle East Hub -->
+                        <div class="slide6-hub-section" style="margin-top: 6px;">
+                            <div class="slide6-hub-header" style="background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 11px;">🇦🇪 DUBAI HUB — Middle East</span>
+                                <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$58B+</span>
+                            </div>
+                            <table class="slide6-table slide6-country-table">
+                                <tr><td class="slide6-country">United Arab Emirates</td><td class="slide6-flag">🇦🇪</td><td class="slide6-spend-cell">$21B</td></tr>
+                                <tr><td class="slide6-country">Turkey</td><td class="slide6-flag">🇹🇷</td><td class="slide6-spend-cell">$25B</td></tr>
+                                <tr><td class="slide6-country">Saudi Arabia</td><td class="slide6-flag">🇸🇦</td><td class="slide6-spend-cell">$12B</td></tr>
+                                <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Qatar, Jordan, Oman, Bahrain, Kuwait...</td><td style="font-size: 10px; color: #888;">8+ countries</td></tr>
+                            </table>
+                        </div>
+
+                        <!-- South Asia Hub -->
+                        <div class="slide6-hub-section" style="margin-top: 6px;">
+                            <div class="slide6-hub-header" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 11px;">🇮🇳 MUMBAI HUB — South Asia</span>
+                                <span style="font-size: 11px; color: #fff; font-weight: 700;">$33B+</span>
+                            </div>
+                            <table class="slide6-table slide6-country-table">
+                                <tr><td class="slide6-country">India</td><td class="slide6-flag">🇮🇳</td><td class="slide6-spend-cell">$29B</td></tr>
+                                <tr><td class="slide6-country">Sri Lanka</td><td class="slide6-flag">🇱🇰</td><td class="slide6-spend-cell">$4B</td></tr>
+                                <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Nepal, Bangladesh, Bhutan, Maldives...</td><td style="font-size: 10px; color: #888;">5+ countries</td></tr>
+                            </table>
+                        </div>
+
+                        <!-- Asia-Pacific Hub -->
+                        <div class="slide6-hub-section" style="margin-top: 6px;">
+                            <div class="slide6-hub-header" style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 11px;">🇸🇬 SINGAPORE HUB — Asia-Pacific</span>
+                                <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$128B+</span>
+                            </div>
+                            <table class="slide6-table slide6-country-table">
+                                <tr><td class="slide6-country">Thailand</td><td class="slide6-flag">🇹🇭</td><td class="slide6-spend-cell">$63B</td></tr>
+                                <tr><td class="slide6-country">China</td><td class="slide6-flag">🇨🇳</td><td class="slide6-spend-cell">$40B</td></tr>
+                                <tr><td class="slide6-country">Hong Kong</td><td class="slide6-flag">🇭🇰</td><td class="slide6-spend-cell">$37B</td></tr>
+                                <tr><td class="slide6-country">Australia</td><td class="slide6-flag">🇦🇺</td><td class="slide6-spend-cell">$45B</td></tr>
+                                <tr><td class="slide6-country">Malaysia</td><td class="slide6-flag">🇲🇾</td><td class="slide6-spend-cell">$19B</td></tr>
+                                <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Indonesia, Vietnam, Philippines, Japan, South Korea, Taiwan...</td><td style="font-size: 10px; color: #888;">12+ countries</td></tr>
+                            </table>
+                        </div>
+
+                        <!-- Americas Hub -->
+                        <div class="slide6-hub-section" style="margin-top: 6px;">
+                            <div class="slide6-hub-header" style="background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%); color: white; padding: 6px 10px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 700; font-size: 11px;">🇺🇸 NEW YORK HUB — Americas</span>
+                                <span style="font-size: 11px; color: #ffeb3b; font-weight: 700;">$259B+</span>
+                            </div>
+                            <table class="slide6-table slide6-country-table">
+                                <tr><td class="slide6-country">United States</td><td class="slide6-flag">🇺🇸</td><td class="slide6-spend-cell">$214B</td></tr>
+                                <tr><td class="slide6-country">Canada</td><td class="slide6-flag">🇨🇦</td><td class="slide6-spend-cell">$22B</td></tr>
+                                <tr><td class="slide6-country">Mexico</td><td class="slide6-flag">🇲🇽</td><td class="slide6-spend-cell">$23B</td></tr>
+                                <tr class="slide6-subtotal"><td colspan="2" style="text-align: right; font-size: 9px; color: #666;">+ Brazil, Caribbean, Colombia, Argentina, Peru, Chile...</td><td style="font-size: 10px; color: #888;">15+ countries</td></tr>
+                            </table>
+                        </div>
                     </div>
-                    <div class="slide6-footer-divider" style="height: 25px;"></div>
-                    <div class="slide6-footer-stat">
-                        <div class="slide6-footer-number" style="font-size: 22px;">$763B+</div>
-                        <div class="slide6-footer-label" style="font-size: 8px;">Market Coverage</div>
-                    </div>
-                    <div class="slide6-footer-divider" style="height: 25px;"></div>
-                    <div class="slide6-footer-stat">
-                        <div class="slide6-footer-number" style="font-size: 22px;">85%</div>
-                        <div class="slide6-footer-label" style="font-size: 8px;">of Global TAM</div>
-                    </div>
-                    <div class="slide6-footer-divider" style="height: 25px;"></div>
-                    <div class="slide6-footer-stat">
-                        <div class="slide6-footer-number" style="font-size: 22px;">104</div>
-                        <div class="slide6-footer-label" style="font-size: 8px;">Nationalities</div>
+                    
+                    <div class="slide6-footer-banner animate delay-4" style="padding: 10px 15px;">
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number" style="font-size: 22px;">40+</div>
+                            <div class="slide6-footer-label" style="font-size: 8px;">Countries</div>
+                        </div>
+                        <div class="slide6-footer-divider" style="height: 25px;"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number" style="font-size: 22px;">$763B+</div>
+                            <div class="slide6-footer-label" style="font-size: 8px;">Market Coverage</div>
+                        </div>
+                        <div class="slide6-footer-divider" style="height: 25px;"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number" style="font-size: 22px;">85%</div>
+                            <div class="slide6-footer-label" style="font-size: 8px;">of Global TAM</div>
+                        </div>
+                        <div class="slide6-footer-divider" style="height: 25px;"></div>
+                        <div class="slide6-footer-stat">
+                            <div class="slide6-footer-number" style="font-size: 22px;">104</div>
+                            <div class="slide6-footer-label" style="font-size: 8px;">Nationalities</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-    /* Additional Slide 6 Styles for Expanded Table */
-.slide6-hub-section {
-    margin-bottom: 4px;
-}
 
-.slide6-country-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 10px;
-    margin-bottom: 4px;
-}
-
-.slide6-country-table td {
-    padding: 4px 6px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.slide6-country {
-    font-weight: 600;
-    color: #333;
-    font-size: 10px;
-}
-
-.slide6-flag {
-    font-size: 12px;
-    width: 20px;
-    text-align: center;
-}
-
-.slide6-spend-cell {
-    font-weight: 700;
-    color: var(--orn-cyan);
-    font-size: 11px;
-    text-align: right;
-}
-
-.slide6-subtotal td {
-    background: #fafafa;
-    border-bottom: none;
-    padding: 3px 6px;
-}
-
-.slide6-hub-section:last-child {
-    margin-bottom: 0;
-}
     <!-- SLIDE 7: WHY WORK WITH US - TROPICAL BEACH -->
     <div class="slide" id="slide7">
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80" alt="Tropical Beach" class="bg-image">
